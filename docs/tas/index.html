@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://19276.cache.armorgames.com/files/games/mini-sticky-19276/index.html?v=1658331953 -->
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Mini Sticky - TAS</title>
+
+        <link rel="shortcut icon" href="../favicon.ico" />
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        
+        <meta content="utf-8" http-equiv="encoding">
+    </head>
+    <body oncontextmenu="return false;" style="background-color: #f8f8f8">
+        <div id="gameDiv" style="overflow:hidden; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background-color: #f8f8f8; border-color: #f8f8f8; border-style: solid; border-width: 0px;">
+            <video id="introVideo" style="z-index: 3">Your browser does not support the video tag.</video>
+        </div>
+        <canvas id="gameCanvas" width="1920" height="907" style="background-color: rgb(248, 248, 248); top: 0px; position: absolute; left: 0px; display: block; z-index: 2; width: 100%; height: 100%; cursor: default;">Your browser requires Canvas support to play this game.</canvas>
+        
+        <script type="text/javascript" src="coffee.js"></script>
+        <script type="text/javascript" src="../Mini_Sticky_files/game-tas.js"></script>
+        <script type="text/javascript" src="../Mini_Sticky_files/main-tas.js" onload="Engine.System.run()"></script>
+
+        <script type="text/javascript">
+            window.addEventListener("load", function(){
+                Game.addAction("playlevelbutton", function(){
+                    window.coffee._onScene(Game.Level.nextIndex);
+                });
+                Game.addAction("resetlevelbutton", function(){
+                    window.coffee._onScene(Game.Level.index);
+                    window.coffee._onReset();
+                });
+            });
+        </script>
+    </body>
+</html>
