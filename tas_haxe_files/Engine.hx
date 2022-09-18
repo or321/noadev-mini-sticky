@@ -224,7 +224,8 @@ class Engine {
 		// NoaDev games requires the "r" key to be pressed during the entire frame, so we release it after 1 frame has passed.
 		Browser.window.setTimeout(function() {
 			sendGameInput(82, false);
-		}, control.speed == 0 ? 100 : frameLength);
+		}, 100);
+		//}, control.speed == 0 ? 100 : frameLength);
 
 		recording = new Video.VideoRecorder(initialDirection);
 		control = new PlayControl();
