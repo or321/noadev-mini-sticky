@@ -9649,7 +9649,7 @@ var Game;
             Resources.textureGooglePlay = new Engine.Texture(PATH_GOOGLE_PLAY_LOGO, false, true);
             Resources.textureGooglePlay.preserved = true;
         }
-        var volumeScale = 0.6 * 1;
+        var volumeScale = 0.2 * 1;
         var bgmsca = 0.9;
         var sfxsca = 0.71;
         Resources.bgms[0] = new Engine.AudioPlayer(PATH_MUSIC);

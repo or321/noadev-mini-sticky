@@ -10,6 +10,7 @@
     
     Game.addAction("postinit", function(){
         Game.SceneFade.setColor(0, 0, 0);
+        Game.LevelSelection.unllev();
     });
 
 })();
